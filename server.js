@@ -59,6 +59,12 @@ class WhatsAppServer {
     });
 
     // API routes
+    this.app.get("/", (req, res) => {
+      res.json({
+        message: "Welcome to the WhatsApp Web Clone API",
+      });
+    });
+
     this.app.use("/api/messages", messageRoutes);
 
     // 404 handler
